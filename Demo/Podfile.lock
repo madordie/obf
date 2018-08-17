@@ -1,0 +1,16 @@
+PODS:
+  - TCP (0.0.1)
+
+DEPENDENCIES:
+  - TCP (from `./../`)
+
+EXTERNAL SOURCES:
+  TCP:
+    :path: "./../"
+
+SPEC CHECKSUMS:
+  TCP: ca3359c88ef631553f31ec1ee4dd0c1f0526c29e
+
+PODFILE CHECKSUM: 9a7edad3deee91ff235ea664fffd659e49d6aba2
+
+COCOAPODS: 1.5.3

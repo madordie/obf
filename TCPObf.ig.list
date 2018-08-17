@@ -1,0 +1,9 @@
+interface
+error
+initWithDelegate
+socket
+init
+close
+initWithData
+length
+objectForKey

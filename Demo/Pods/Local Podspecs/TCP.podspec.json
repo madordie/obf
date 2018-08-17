@@ -1,0 +1,35 @@
+{
+  "name": "TCP",
+  "version": "0.0.1",
+  "summary": "An auto-confusing tcp S/C.",
+  "description": "An auto-confusing tcp S/C.",
+  "homepage": "https://madordie.github.io",
+  "license": "MIT",
+  "authors": {
+    "madordie": "e.madordie@gmail.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "http://github.com/madordie/TCP.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "Classes",
+    "Classes/**/*.{h,m}"
+  ],
+  "public_header_files": "Classes/TCP*.h",
+  "prefix_header_contents": [
+    "#import \"TCPObf.h\""
+  ],
+  "frameworks": [
+    "CFNetwork",
+    "Security"
+  ],
+  "script_phases": {
+    "name": "XOR String and obf list",
+    "script": "python /opt/mdzz/key.py $PODS_TARGET_SRCROOT/Classes/TCPKEY.h $PODS_TARGET_SRCROOT/Classes/TCPKEY.m $PODS_TARGET_SRCROOT/TCPObf.list \nbash /opt/mdzz/obf.sh $PODS_TARGET_SRCROOT/TCPObf.list $PODS_TARGET_SRCROOT/Classes/TCPObf.h",
+    "execution_position": "before_compile"
+  }
+}
